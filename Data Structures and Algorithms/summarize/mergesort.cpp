@@ -1,4 +1,3 @@
-//πÈ≤¢≈≈–Ú 
 template <class Record>
 void MergeSort(Record Array[],Record TempArray[],int left,int right)
 {
