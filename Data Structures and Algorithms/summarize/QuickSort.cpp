@@ -19,5 +19,28 @@ int SelectPivot(int left,int right)
 template <class Record>
 int Partition(Record Array[],int left,int right)
 {
-	
+	int l=left;
+	int r=right;
+	Record temp=Array[r];
+	while(l!=r)
+	{
+		while(l<r&&Array[l]<=temp)
+			l++;
+		if(l<r)
+		{
+			Array[r]=Array[l];
+			r--;
+		} 
+		
+		while(l<r&&Array[r]>=temp)
+			r--;
+		if(l<r)
+		{
+			Array[l]=Array[r];
+			l++;
+		}
+		
+	}
+	Arrray[l]=temp;
+	return l;
 }
